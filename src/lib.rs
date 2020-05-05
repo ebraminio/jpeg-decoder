@@ -27,7 +27,6 @@
 //! ```
 
 #![deny(missing_docs)]
-#![forbid(unsafe_code)]
 
 extern crate byteorder;
 #[cfg(feature="rayon")]
@@ -44,3 +43,4 @@ mod marker;
 mod parser;
 mod upsampler;
 mod worker;
+mod capi;

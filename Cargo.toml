@@ -10,6 +10,17 @@ keywords = ["jpeg", "jpg", "decoder", "image"]
 license = "MIT / Apache-2.0"
 exclude = ["tests/*"]
 
+[lib]
+path = "src/lib.rs"
+name = "jpegdecoder"
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+panic = "abort"
+lto = true
+opt-level = "z"
+
 [dependencies]
 byteorder = "1.0"
 rayon = { version = "1.0", optional = true }
